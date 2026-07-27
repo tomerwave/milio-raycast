@@ -1,0 +1,59 @@
+{
+  "name": "milio-raycast",
+  "title": "Milio",
+  "description": "A local-first Raycast extension for capturing thoughts instantly and reviewing them later.",
+  "icon": "icon.png",
+  "author": "thomas",
+  "license": "MIT",
+  "repository": "https://github.com/tomerwave/milio-raycast",
+  "bugs": "https://github.com/tomerwave/milio-raycast/issues",
+  "homepage": "https://github.com/tomerwave/milio-raycast#readme",
+  "platforms": ["macOS"],
+  "categories": ["Productivity"],
+  "commands": [
+    {
+      "name": "capture-thought",
+      "title": "Capture Thought",
+      "description": "Save a thought to Milio",
+      "mode": "view"
+    },
+    {
+      "name": "review-thoughts",
+      "title": "Review Thoughts",
+      "description": "Review your Milio inbox",
+      "mode": "view"
+    },
+    {
+      "name": "morning-review",
+      "title": "Morning Review",
+      "description": "Process thoughts captured since your last review",
+      "mode": "view"
+    }
+  ],
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "lint": "ray lint && npm run architecture",
+    "lint:fix": "ray lint --fix",
+    "architecture": "node scripts/check-architecture.mjs",
+    "repository": "node scripts/check-repository.mjs",
+    "verify": "npm run lint && npm test && npm run typecheck && npm run build && npm run repository",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@raycast/api": "^1.104.23",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.2.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "eslint": "^9.0.0",
+    "eslint-plugin-unicorn": "^65.0.0",
+    "typescript-eslint": "^8.65.0",
+    "typescript": "^5.9.0",
+    "vitest": "^4.1.10"
+  }
+}
