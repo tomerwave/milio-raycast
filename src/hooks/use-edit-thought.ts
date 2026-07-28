@@ -11,7 +11,7 @@ export function useEditThought(thought: Thought) {
   const [isSaving, setIsSaving] = useState(false);
 
   async function submit(content: string) {
-    if (!isValidContent(content) || !store) {
+    if (!store || !isValidContent(content)) {
       setError("Enter a thought before saving.");
 
       return;
