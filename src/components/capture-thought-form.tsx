@@ -28,9 +28,9 @@ async function submitCapture(
   values: Record<string, unknown>,
   submit: (content: string) => Promise<boolean>,
 ) {
-  const saved = await saveCapture(values, submit);
+  const isSaved = await saveCapture(values, submit);
 
-  if (!saved) {
+  if (!isSaved) {
     return;
   }
 

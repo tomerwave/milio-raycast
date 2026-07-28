@@ -42,7 +42,7 @@ export function updateThought(
 export function setReviewed(
   store: MilioStore,
   id: string,
-  reviewed: boolean,
+  isReviewed: boolean,
   timestamp: string,
 ): MilioStore {
   return {
@@ -52,7 +52,7 @@ export function setReviewed(
         return thought;
       }
 
-      if (reviewed) {
+      if (isReviewed) {
         return { ...thought, reviewedAt: timestamp };
       }
 

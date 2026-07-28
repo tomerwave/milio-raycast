@@ -36,7 +36,7 @@ interface SubmitState {
   isLoading: boolean;
   persist: (store: MilioStore) => Promise<void>;
   setError: (error: string | undefined) => void;
-  setIsSaving: (saving: boolean) => void;
+  setIsSaving: (isSaving: boolean) => void;
   store?: MilioStore;
   submitted: SubmittedRef;
 }
