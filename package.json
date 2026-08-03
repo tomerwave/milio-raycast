@@ -43,7 +43,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@raycast/api": "^1.104.23",
+    "@raycast/api": "^1.104.24",
     "zod": "^4.1.12"
   },
   "devDependencies": {
